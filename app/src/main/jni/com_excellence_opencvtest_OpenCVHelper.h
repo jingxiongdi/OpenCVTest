@@ -15,6 +15,15 @@ extern "C" {
 JNIEXPORT jintArray JNICALL Java_com_excellence_opencvtest_OpenCVHelper_gray
   (JNIEnv *, jclass, jintArray, jint, jint);
 
+JNIEXPORT void JNICALL Java_com_excellence_opencvtest_OpenCVHelper_saveMat(
+          JNIEnv *env, jclass obj, jlong addrmat1, jlong addrmat2, jstring path);
+
+JNIEXPORT jdoubleArray JNICALL Java_com_excellence_opencvtest_OpenCVHelper_readMat1(
+          JNIEnv *env, jclass obj, jstring path);
+
+JNIEXPORT jdoubleArray JNICALL Java_com_excellence_opencvtest_OpenCVHelper_readMat2(
+          JNIEnv *env, jclass obj, jstring path);
+
 #ifdef __cplusplus
 }
 #endif
